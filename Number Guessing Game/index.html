@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Main Game Section -->
+
+    <main class="game-container">
+
+        <!-- Heading -->
+
+        <h1>Guess A Number From 1 To 100</h1>
+
+        <p class="subtitle">
+            Let's see how smart you are!
+        </p>
+
+
+        <!-- Input and Button -->
+
+        <div class="game-controls">
+
+            <!-- Number Input -->
+
+            <div class="input-box">
+
+                <span class="dice">🎲</span>
+
+                <input
+                    type="number"
+                    id="guessInput"
+                    placeholder="0"
+                    min="1"
+                    max="100"
+                >
+
+            </div>
+
+
+            <!-- Guess Button -->
+
+            <button id="guessBtn">
+
+                Guess <span>→</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Result Message -->
+
+        <p id="message"></p>
+
+
+        <!-- Bottom Text -->
+
+        <p class="footer-text">
+            Pick a number & challenge yourself!
+        </p>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+        let randomNumber =
+            Math.floor(Math.random() * 100) + 1;
+
+        let attempts = 0;
+
+        const input =
+            document.getElementById("guessInput");
+
+        const button =
+            document.getElementById("guessBtn");
+
+        const message =
+            document.getElementById("message");
+
+
+        function checkGuess() {
+
+            let guess = Number(input.value);
+
+            if (
+                input.value === "" ||
+                guess < 1 ||
+                guess > 100
+            ) {
+
+                message.textContent =
+                    "⚠️ Enter a number between 1 and 100.";
+
+                message.className = "error";
+
+                return;
+
+            }
+
+
+            attempts++;
+
+
+            if (guess === randomNumber) {
+
+                message.textContent =
+                    `🎉 Correct! You won in ${attempts} attempts!`;
+
+                message.className = "success";
+
+                randomNumber =
+                    Math.floor(Math.random() * 100) + 1;
+
+                attempts = 0;
+
+            }
+
+            else if (guess < randomNumber) {
+
+                message.textContent =
+                    "📈 Too low! Try a higher number.";
+
+                message.className = "hint";
+
+            }
+
+            else {
+
+                message.textContent =
+                    "📉 Too high! Try a lower number.";
+
+                message.className = "hint";
+
+            }
+
+        }
+
+
+        // Button Click
+
+        button.addEventListener("click", checkGuess);
+
+
+        // Enter Key
+
+        input.addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+
+                checkGuess();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

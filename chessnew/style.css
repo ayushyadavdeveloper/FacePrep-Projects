@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADING */
+
+h1 {
+    color: #2f8d46;
+    font-size: 42px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* CHESS BOARD */
+
+.chessboard {
+    width: 640px;
+    height: 640px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    border: 1px solid #555;
+}
+
+
+/* EACH BOX */
+
+.box {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    font-size: 55px;
+}
+
+
+/* LIGHT BOX */
+
+.light {
+    background-color: #ffffff;
+}
+
+
+/* DARK BOX */
+
+.dark {
+    background-color: #808080;
+}
+
+
+/* WHITE CHESS PIECES */
+
+.white-piece {
+    color: white;
+
+    text-shadow:
+        2px 2px 2px black,
+        -1px -1px 1px black;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .chessboard {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .box {
+        width: auto;
+        height: auto;
+        font-size: 8vw;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}

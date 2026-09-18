@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Clone</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                    Create Playlist
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    Liked Songs
+                </a>
+            </nav>
+
+            <!-- Small Playlists -->
+            <div class="small-playlists">
+
+                <div class="playlist-card">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400"
+                         alt="Playlist">
+
+                    <h3>Beats to think to</h3>
+                    <p>Focus, study, deep work</p>
+                    <span>50 songs</span>
+                </div>
+
+                <div class="playlist-card">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400"
+                         alt="Playlist">
+
+                    <h3>Chill Hits</h3>
+                    <p>Kick back to the best new</p>
+                    <span>and recent hits.</span>
+                </div>
+
+            </div>
+
+            <div class="sidebar-bottom">
+                <div>
+                    <i class="fa-solid fa-circle-down"></i>
+                    Install App
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    English
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="arrows">
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="zoom">
+                    64%
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <button class="share">
+                    Share
+                </button>
+
+            </header>
+
+
+            <!-- Playlist Header -->
+            <section class="playlist-header">
+
+                <div class="playlist-cover">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
+                         alt="Deep Focus">
+                </div>
+
+                <div class="playlist-info">
+
+                    <span class="playlist-type">
+                        Playlist
+                    </span>
+
+                    <h1>Deep Focus</h1>
+
+                    <p>
+                        Keep calm and focus with ambient and post-rock music.
+                    </p>
+
+                    <div class="spotify-info">
+                        <i class="fa-brands fa-spotify"></i>
+                        <b>Spotify</b>
+                        <span>•</span>
+                        <span>1,948,863 likes</span>
+                        <span>•</span>
+                        <span>252 songs, about 15 hr</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Buttons -->
+            <section class="controls">
+
+                <button class="play-btn">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button class="heart-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <button class="more-btn">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+            </section>
+
+
+            <!-- ================= SONG LIST ================= -->
+
+            <section class="songs">
+
+                <div class="song-heading">
+                    <span>#</span>
+                    <span>Title</span>
+                    <span>Album</span>
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+                </div>
+
+
+                <!-- Song 1 -->
+                <div class="song">
+
+                    <span class="number">1</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>So Far So Good</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        So Far So Good
+                    </span>
+
+                    <span class="duration">
+                        4:17
+                    </span>
+
+                </div>
+
+
+                <!-- Song 2 -->
+                <div class="song">
+
+                    <span class="number">2</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>Agerity</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        Agerity
+                    </span>
+
+                    <span class="duration">
+                        3:52
+                    </span>
+
+                </div>
+
+
+                <!-- Song 3 -->
+                <div class="song">
+
+                    <span class="number">3</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>Solarium</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        Solarium
+                    </span>
+
+                    <span class="duration">
+                        4:24
+                    </span>
+
+                </div>
+
+
+                <!-- Song 4 -->
+                <div class="song">
+
+                    <span class="number">4</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>efflorescence</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        efflorescence
+                    </span>
+
+                    <span class="duration">
+                        5:29
+                    </span>
+
+                </div>
+
+
+                <!-- Song 5 -->
+                <div class="song">
+
+                    <span class="number">5</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>Gather My Thoughts</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        Gather My Thoughts
+                    </span>
+
+                    <span class="duration">
+                        4:06
+                    </span>
+
+                </div>
+
+
+                <!-- Song 6 -->
+                <div class="song">
+
+                    <span class="number">6</span>
+
+                    <div class="song-title">
+
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=100"
+                             alt="">
+
+                        <div>
+                            <h3>Fresh Paint</h3>
+                        </div>
+
+                    </div>
+
+                    <span class="album">
+                        Fresh Paint
+                    </span>
+
+                    <span class="duration">
+                        4:41
+                    </span>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ================= BOTTOM PLAYER ================= -->
+
+        <footer class="player">
+
+            <div class="player-left">
+
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100"
+                     alt="">
+
+                <div>
+                    <h4>So Far So Good</h4>
+                    <p>Deep Focus</p>
+                </div>
+
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+
+
+            <div class="player-center">
+
+                <div class="player-buttons">
+
+                    <button>
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+
+                    <button class="pause">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-repeat"></i>
+                    </button>
+
+                </div>
+
+                <div class="progress-container">
+                    <span>0:42</span>
+                    <div class="progress">
+                        <div class="progress-value"></div>
+                    </div>
+                    <span>4:17</span>
+                </div>
+
+            </div>
+
+
+            <div class="player-right">
+
+                <i class="fa-solid fa-music"></i>
+
+                <i class="fa-solid fa-list"></i>
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <div class="volume">
+                    <div></div>
+                </div>
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
